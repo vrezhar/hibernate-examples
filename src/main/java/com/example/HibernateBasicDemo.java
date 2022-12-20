@@ -72,5 +72,6 @@ public class HibernateBasicDemo {
         em.getTransaction().commit();
         final var found = em.find(DateExamplesEntity.class, 1L);
         System.out.println("Found zone offset saved: " + found.getaZoneOffset());
+        sessionFactory.close();
     }
 }
